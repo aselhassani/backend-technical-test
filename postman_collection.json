@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "d0a03f51-e5f8-4c4c-8b6c-1100626922ee",
+		"name": "backend-technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createAccount",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"customer\",\r\n  \"password\": \"customer\",\r\n  \"firstName\": \"Admin\",\r\n  \"lastName\": \"Test\",\r\n  \"email\": \"customer@domain.com\",\r\n  \"phoneNumber\": \"+2126787690\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0dWkiLCJleHAiOjE2NDcxNTc5MTEsImlhdCI6MTY0NzEzOTkxMX0.Su62fDjvzi5Pa47dG7zaXcfnij4t8rbgl5kSfDgF5oDoADnIbVYZDbGuIBXu_jH5zsdGMAO0Iw5uQi6kvDvBhw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\", \"password\":\"adminadmin\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alisaidi@gmail.com\",\r\n    \"phoneNumber\": \"+21 641967399\",\r\n    \"quantity\": 5,\r\n    \"street\": \"P.O. Box 887 2508 Dolor. Av. Muskegon KY\",\r\n    \"postcode\": \"12482\",\r\n    \"country\": \"USA\",\r\n    \"city\": \"Marrakesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0dWkiLCJleHAiOjE2NDczMDQ2OTQsImlhdCI6MTY0NzI4NjY5NH0.qdJ5YJT2AecUuaxZ5KL8l34iu6dLJdWzx40IvnErvEcQMQ1mIXA0jrO4geBwDB48ZtGsovxMIBNzLgmmge0nXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"reference\":\"1-20223006-001\", \"quantity\": 5}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swagger-ui",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0dWkiLCJleHAiOjE2NDcxODIwOTIsImlhdCI6MTY0NzE2NDA5Mn0.q28L1sHyyBU2RikZIhuFEnsPwoWWxgjcLUX-e4cfFhBH-UFgPnNkM9V-VddzMp-JGmBOy0sKywBBhrziF_WDBg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"test@hespres.com\",\"phoneNumber\" : \"+21 641967399\", \"street\":\"P.O. Box 887 2508 Dolor. Av. Muskegon KY\", \"postcode\": \"12482\", \"country\": \"USA\", \"city\" : \"Marrakesh\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/swagger-ui",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"swagger-ui"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTY0Nzc2NDgwMH0.HH2Kwz8SVZvmfYb5QX6exbOBIdUT3cMBZdpJSqqxyAUoFyzQJ8P4eTDJCAAhgnyUkpvW-rWmb8LuB9xM_25pcA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/orders?page=0&size=10&firstName=cu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "firstName",
+							"value": "cu"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
