@@ -23,7 +23,7 @@ git clone <repo>
 
 ### Compile and run
 ```bash
-docker compose up
+docker-compose up --build
 ```
 
 ### Features & business rules
