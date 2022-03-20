@@ -31,7 +31,7 @@ docker-compose up --build
 
 - Create an order for a customer by using customer email address
 - Update order quantity
-- Search orders by custom data
+- Search orders by customer data
 - **Only users with ADMIN authority are allowed to use the search**. To test this feature, you must be logged on by an admin user
  
 #### -User authentication endpoint
@@ -124,7 +124,7 @@ PUT [http://localhost:8081/api/v1/orders](http://localhost:8081/api/v1/orders "h
 ```
 
 #### -Search orders by customer data
-The reference and the quantity are mandatory to update an order :
+Search by email, firstName, lastName and phoneNumber
 
 GET [http://localhost:8081/api/v1/orders?email=cust&firstName=cust&page=0&size=5](http://localhost:8081/api/v1/orders?email=cust&firstName=cust&page=0&size=5 "http://localhost:8081/api/api/v1/orders?email=cust&firstName=cust&page=0&size=5")
 
