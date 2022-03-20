@@ -23,6 +23,7 @@ git clone <repo>
 
 ### Compile and run
 ```bash
+mvn clean install
 docker-compose up --build
 ```
 
