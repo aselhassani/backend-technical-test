@@ -37,8 +37,8 @@ docker-compose up --build
 #### -User authentication endpoint
 For test purpose, an admin user is created by default :
 
-username : admin  
-password : adminadmin
+username : **admin**  
+password : **adminadmin**
 
 Admin user credential should be used to login through authenticate endpoint :
 
