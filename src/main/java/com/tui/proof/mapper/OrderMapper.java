@@ -1,17 +1,3 @@
-package com.tui.proof.mapper;
-
-import java.util.List;
-
-import org.mapstruct.Builder;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.tui.proof.domain.Order;
-import com.tui.proof.dto.order.OrderRequest;
-import com.tui.proof.dto.order.OrderResponse;
-import com.tui.proof.service.CustomerService;
-
 /* Copyright (c) 2022 Ali Saidi Elhassani
 *
 * Permission is hereby granted, free of charge, to any person obtaining
@@ -34,6 +20,20 @@ import com.tui.proof.service.CustomerService;
 * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 * 
 */
+
+package com.tui.proof.mapper;
+
+import java.util.List;
+
+import org.mapstruct.Builder;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.tui.proof.domain.Order;
+import com.tui.proof.dto.order.OrderRequest;
+import com.tui.proof.dto.order.OrderResponse;
+import com.tui.proof.service.CustomerService;
 
 @Mapper(componentModel = "spring", builder = @Builder(disableBuilder = true))
 public abstract class OrderMapper {
